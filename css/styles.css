@@ -1,0 +1,170 @@
+* {
+	box-sizing: border-box;
+	font-family: 'Montserrat', sans-serif;
+}
+
+html{
+	font-size: 16px;
+}
+
+body {
+	padding: 20px;
+	margin: 0;
+}
+
+body::before{
+	content: "";
+	position: fixed;
+	top: 0;	left: 0;
+	width: 100%; height: 100%;
+	background-image: url(../img/bg.jpeg);
+	filter: brightness(0.3);
+	background-size: cover;
+	z-index: -1;
+}
+
+form {
+	display: flex;
+	width: 100%;
+	position: fixed;
+	z-index: 1;
+	background-color: rgba(0,0,0,0.5);
+	padding: 20px;
+	top: 0;
+	left: 0;
+	width: 100%;
+}
+
+form input{
+	flex-grow: 1;
+	padding: 10px;
+	font-size: 2rem;
+	background-color: rgb(100,100,100);
+	border: none;
+	margin-right: 5px;
+	transition: background-color 0.3s linear;
+}
+
+form input:focus{
+	outline: 3px solid rgb(255, 81, 0);
+	background-color: rgb(255,255,255) ;
+}
+
+form button{
+	flex-grow: 0;
+	flex-shrink: 0;
+	width: 25%;
+	font-size: 2rem;
+	background-color: rgb(255, 81, 0);
+	color: white;
+	border: none;
+}
+
+main {
+	margin-top: 10px;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	margin-top: 80px;
+}
+
+main article {
+	position: relative;
+	width: fit-content;
+	height: calc(25vw - 70px / 4);
+	margin-bottom: 5px;
+}
+
+main article img{
+	object-fit: cover;
+	height: calc(25vw - 70px / 4);
+	width: calc(25vw - 70px / 4);
+}
+
+main article div{
+	display: block;
+	position: absolute;
+	top: 10px;
+	left: 0;
+	font-size: 1.5rem;
+	background-color: white;
+	color: black;
+	padding: 10px;
+	opacity: 0.8;
+}
+
+main article span{
+	display: block;
+	position: absolute;
+	top: 50px;
+	left: 0;
+	font-size: 1.0rem;
+	background-color: black;
+	color: white;
+	padding: 5px;
+}
+
+main article button{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgb(255, 81, 0);
+	border: none;
+	color: white;
+	padding: 0;
+	font-size: 1.5rem;
+	cursor: pointer;
+	opacity: 0;
+	transition: opacity 0.2s linear;
+}
+
+main article button:focus{
+	outline: 3px solid rgb(255, 81, 0);	
+}
+
+main article:hover button{
+	opacity: 0.8;
+}
+
+@media (max-width:750px){
+	main {
+		margin-top: 60px;
+	}
+
+	main article {
+		height: calc(50vw - 60px / 2);
+		margin-bottom: 5px;
+	}
+	
+	main article img{
+		height: calc(50vw - 60px / 2);
+		width: calc(50vw - 60px / 2);
+	}
+
+	form {
+		padding: 10px;
+	}
+	
+	form input{
+		padding: 5px;
+		font-size: 1.5rem;
+	}
+		
+	form button{
+		font-size: 1.5rem;
+	}
+}
+
+@media (max-width:480px){
+	main article {
+		height: calc(100vw - 40px);
+		margin-bottom: 5px;
+	}
+	
+	main article img{
+		height: calc(100vw - 40px);
+		width: calc(100vw - 40px);
+	}	
+}
