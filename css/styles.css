@@ -39,7 +39,7 @@ form input{
 	flex-grow: 1;
 	padding: 10px;
 	font-size: 2rem;
-	background-color: rgb(100,100,100);
+	background-color: rgb(200,200,200);
 	border: none;
 	margin-right: 5px;
 	transition: background-color 0.3s linear;
