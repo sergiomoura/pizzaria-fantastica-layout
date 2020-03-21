@@ -8,7 +8,6 @@ html{
 }
 
 body {
-	padding: 20px;
 	margin: 0;
 }
 
@@ -61,28 +60,27 @@ form button{
 }
 
 main {
-	margin-top: 10px;
-	display: flex;
-	justify-content: space-between;
-	flex-wrap: wrap;
-	margin-top: 80px;
+	margin: 100px 20px 20px 20px;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-auto-rows: 1fr;
+	column-gap: 10px;
+	row-gap: 10px;
 }
 
 main article {
 	position: relative;
-	width: fit-content;
-	height: calc(25vw - 70px / 4);
-	margin-bottom: 5px;
+	display: flex;
 }
 
 main article img{
+	width: 100%;
+	height: 100%;
 	object-fit: cover;
-	height: calc(25vw - 70px / 4);
-	width: calc(25vw - 70px / 4);
 }
 
 main article div{
-	display: block;
+
 	position: absolute;
 	top: 10px;
 	left: 0;
@@ -94,7 +92,6 @@ main article div{
 }
 
 main article span{
-	display: block;
 	position: absolute;
 	top: 50px;
 	left: 0;
@@ -130,17 +127,11 @@ main article:hover button{
 
 @media (max-width:750px){
 	main {
+		grid-template-columns: 1fr 1fr;
+		column-gap: 10px;
+		row-gap: 10px;
+		padding: 0 10px;
 		margin-top: 60px;
-	}
-
-	main article {
-		height: calc(50vw - 60px / 2);
-		margin-bottom: 5px;
-	}
-	
-	main article img{
-		height: calc(50vw - 60px / 2);
-		width: calc(50vw - 60px / 2);
 	}
 
 	form {
@@ -154,7 +145,7 @@ main article:hover button{
 		
 	form button{
 		font-size: 1.5rem;
-	}
+	} 
 }
 
 @media (max-width:480px){
